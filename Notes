@@ -26,3 +26,12 @@ T T -- T            T T -- T            T -- F
 T F -- F            T F -- T
 F T -- F            F T -- T
 F F -- T            F F -- F
+
+Loops
+if else if else --> conditions
+ternary --> if want to use if/else on a single line or smaller conditions [condition ? true : false;]
+switch case (break means to simply come out of the block and continue is 
+for loop -- we know the start and end points whereas for foreach only we need start point only 
+while -- when iteration is not known also while works
+do while -- even if the condition is false it will execute atleast once
+
