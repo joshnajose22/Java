@@ -1,9 +1,14 @@
 #Java notes
 Hardware -> OS -> JDK(Consists JRE (Consist of JVM and libraries))
+JDK - development kit to compile source code to convert to byte code
+JVM - machine on which byte code is running
 JVM is platform dependant and Java is platform independant
+JRE - will be consisting of all the extra classes/inbuilt functions used in your code
 Variables
-Class
-Objects
+Class - its a template/blueprint of objects
+Objects - are instances of class
+- have a property and behaviour
+- JVM creates objects
 Literals
 Type casting is explicitly converting data types
 Type conversion is implicitly converting data types
@@ -34,4 +39,18 @@ switch case (break means to simply come out of the block and continue is
 for loop -- we know the start and end points whereas for foreach only we need start point only 
 while -- when iteration is not known also while works
 do while -- even if the condition is false it will execute atleast once
+
+Method overloading
+
+Stack and Heap in JVM
+In Java Virtual Machine (JVM), memory is divided into two main regions: stack and heap
+Stack is a region of memory that is used to store METHOD invocations and LOCAL VARIABLES and heap address of OBJECTS 
+Each thread in a Java program has its own stack, which is used to store the state of the method invocations for that thread. 
+When a method is invoked, a new frame is pushed onto the stack, and when the method returns, the frame is popped off the stack. 
+The memory used by the stack is allocated and deallocated quickly, making it very efficient for short-lived objects.
+
+Heap is a region of memory that is used to store long-lived objects, such as OBJECTS that are created using the new operator. 
+The heap is shared among all threads in a Java program and is managed by the JVM's garbage collector. 
+When an object is no longer needed, the garbage collector will reclaim the memory used by that object, making it available for new objects. 
+The heap is less efficient than the stack for short-lived objects, but is necessary for storing long-lived objects.
 
