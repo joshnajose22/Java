@@ -1,0 +1,60 @@
+Array - 
+dynamic syntax
+int num[] = new int[3];  //by default num[] = {0,0,0}
+to print all these values in array use for loop
+public class hello{
+    public static void main(String args[]){
+        int num[] = new int[4];
+        for(int i=0; i<=3;i++){
+            System.out.println(num[i]);
+        }
+     }}
+Multidimensional array-
+public class hello{
+    public static void main(String args[]){
+        int num[][] = new int[3][4];
+        //int num[][] = new int[row][column]
+
+        for(int i=0; i<=2;i++){
+            for(int j=0;j<=3;j++){
+                num[i][j]=(int) (Math.random() * 100); //To fetch random numbers use the random() from Math inbuilt class
+                \\random() returns decimal numbers of double type
+            }  
+        }
+
+        for(int i=0; i<=2;i++){
+            for(int j=0;j<=3;j++){
+                System.out.print(num[i][j] + " ");
+            }
+            System.out.println();
+        }}}
+using enhanced for loop
+public class hello{
+    public static void main(String args[]){
+        int num[][] = new int[3][4];
+
+        for(int n[]:num){ //n[] is the array within the num array
+            for(int m:n){ //m is the element in n[] array
+                m=(int)(Math.random() * 10);
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }}}
+Jagged array - the rows are fixed but columns are dynamic value
+public class hello{
+    public static void main(String args[]){
+        int num[][] = new int[3][];
+        num[0] = new int[3];
+        num[1] = new int[4];
+        num[2] = new int[2];
+
+        for(int n[]:num){ //n[] is the array within the num array
+            for(int m:n){ //m is the element in n[] array
+                m=(int)(Math.random() * 10);
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }}}
+
+
+
