@@ -56,5 +56,7 @@ public class hello{
             System.out.println();
         }}}
 
+By default, array[i] = 0
 
-
+Exceptions are runtime errors
+array.length gives the actual size of the array
