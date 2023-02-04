@@ -1,0 +1,46 @@
+String is actually a class rather than primitive data types like int, double, char, etc
+String name = new String("Navin"); OR String name = "Navin";
+Now this class has different metods like hashCode(), charAt(), concat()
+
+Types of String
+Since strings are used heavily in java, most of the time we end up using the same string variable 
+Inside heap memory in JVM, there will be a special area called String Constant Pool
+eg:                      \\ Stack           Heap
+String name = "Navin";      name 101        SCP
+name = name + "Reddy        name 103        101 Navin
+String S1 = "navin";        S1 102          102 navin
+String S2 = "navin";        S2 102          103 Navin Reddy
+Now 101 is eligible for garbage collection
+Immutable string -> cannot change //by default strings are immutable, once object is created cannot change value
+Mutable string -> can change //to make string muable there are 2 different class String Buffer and String Builder
+
+String Buffer -- will give a buffer size which is of 16 characters
+StringBuffer sb = new StringBuffer();
+StringBuffer sb1 = new StringBuffer("Navin");
+sb.capacity();  \\capacity is 16
+sb1.capacity(); \\capacity is 21 ie 16 + 5
+toSring() - to return the string value of the stringbuffer data
+
+StringBuffer is thread safe and stringbuilder is not thread safe
+
+Static variable -- making the variable common/shared to/by all objects
+Also static variables should be called with the class name not object name
+
+Static block --if we are intializing the variables in the constructor and there is a static variable also included....then each time an object is created the static variable is also getting intialized which is unnecessary as the value always remains same
+So for this case you can initialize static variables in a static block 
+static{
+int num;
+}
+Everytime an object is created -class loades \\basically class only loads once...in JVM we have a class loader and this will have all class loaded from                                     library
+                               -and object get instantiated
+Everytime class loading happens, static block also loads and since class loading happens before object creation
+If there is no object created then class does not load and also static block is not loaded
+Now without object created if I have to load class then I will need to use forName() from Class class
+main method(){
+Class.forName("Student");
+}
+
+Static method -- 
+Static methods can be called directly with the class name 
+A static variable can used within a static method but a non static variable cannot be used whereas for normal methods there is no such limitation
+Indirectly we can non static variables
