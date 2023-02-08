@@ -32,3 +32,32 @@ public class blaah{
 Access modifiers
 private variable - accessible only within same class
 
+this keyword --> represents the current object that is calling the method
+If both instance variable and local variable take the same name then in below case
+class Student {
+    private int mark;
+
+    public int getMark(){
+        return mark;
+    }
+    public void setMark(int mark){      \\\\public void setMark(int mark, Student s){
+    \\by default mark will be 0
+        mark = mark;                     \\\\s.mark = mark;}
+        \\ this mark can be a local variable instead of instance one and it keeps assigning to itself; where the value of mark is still 0
+    }                   
+}
+
+Constructor --> is a special method with method name same as class name without any return type
+Constructors do not need to be called explicitly....it is called at the time of object creation
+Constructor overloading 
+By default every constructor in Java has a method even if not mentioned which is called super()
+Super() calls the constructor of the super class/parent class
+
+
+public class blaah{
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.setMark(98);                    \\\\s.setMark(98,s);
+        System.out.println(s.getName() + " : " + s.getMark());      
+    }
+}   
