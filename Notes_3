@@ -1,0 +1,58 @@
+Set interface in Java represents an unordered collection of unique elements.
+Arrays.asList() method returns a fixed-size list backed by the specified array, which means that any changes made to the list will be reflected in the array.
+CollectionAPI -- Concept
+Collection -- interface
+Collections -- class
+
+stack - last in first out
+queue - first in first out
+
+Collection interface extends different interfaces like Set(corresponding class HashSet and LinkedHashSet), List(corresponding class ArrayList and LinkedList) and Queue(corresponding class Dequeue)
+
+for the case of Collections instead of for loop to iterate you can use Iterator class
+Collections<Integer> nums = new TreeSet<Integer>();
+Iterator<Integer> values = nums.iterator();
+while(values.hasnext()){
+system.out.println(values.next());
+}
+
+Data structures in Java:
+
+Use arrays when you need a fixed-size collection of elements that can be accessed using an index.
+int[] myArray = {1, 2, 3, 4, 5};
+
+Use ArrayList when you need a dynamically resizable collection of elements that can be accessed using an index.
+ArrayList<Integer> myList = new ArrayList<Integer>();
+myList.add(1);
+
+Use LinkedList when you need to add or remove elements frequently from the beginning or end of the list, and the order of elements does not matter.
+LinkedList<String> myList = new LinkedList<String>();
+myList.add("one");
+
+Use HashSet when you need to store a collection of unique elements, and the order of elements does not matter.
+HashSet<String> mySet = new HashSet<String>();
+mySet.add("one");
+
+Use TreeSet when you need to store a collection of unique elements that are sorted in natural order.
+TreeSet<Integer> mySet = new TreeSet<Integer>();
+mySet.add(3);
+
+Use LinkedHashSet when you need to store a collection of unique elements, and you want to maintain the insertion order.
+LinkedHashSet<String> mySet = new LinkedHashSet<String>();
+mySet.add("one");
+
+Use HashMap when you need to store key-value pairs, and the order of elements does not matter.
+HashMap<String, Integer> myMap = new HashMap<String, Integer>();
+myMap.put("one", 1);
+
+Use TreeMap when you need to store key-value pairs that are sorted in natural order.
+TreeMap<String, Integer> myMap = new TreeMap<String, Integer>();
+myMap.put("three", 3);
+
+Use LinkedHashMap when you need to store key-value pairs, and you want to maintain the insertion order.
+LinkedHashMap<String, Integer> myMap = new LinkedHashMap<String, Integer>();
+myMap.put("one", 1);
+
+Use map when you need to store key-value pairs and as for map the key cannot be repeated but values can be ie keys are set and values are list structure
+
+
